@@ -4,6 +4,7 @@
   "description": "testing lit-css",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --single-quote --write src/**",
     "lint": "stylelint src/*"
   },
   "author": "Serhii Kulykov",
@@ -14,6 +15,7 @@
     "lit-css": "^0.1.2"
   },
   "devDependencies": {
+    "prettier": "^1.14.3",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",

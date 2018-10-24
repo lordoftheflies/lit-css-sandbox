@@ -14,8 +14,7 @@ class MyElement extends LitElement {
         margin-bottom: 40px;
       }
 
-      ${tableStyle}
-      ${fancyTableStyle}
+      ${tableStyle} ${fancyTableStyle};
     `;
   }
 
