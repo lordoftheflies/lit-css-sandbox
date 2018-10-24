@@ -1,0 +1,22 @@
+{
+  "name": "lit-css-sandbox",
+  "version": "0.0.0",
+  "description": "testing lit-css",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint src/*"
+  },
+  "author": "Serhii Kulykov",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.2",
+    "@webcomponents/webcomponentsjs": "^2.1.3",
+    "lit-css": "^0.1.2"
+  },
+  "devDependencies": {
+    "stylelint": "^9.6.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.0"
+  }
+}
