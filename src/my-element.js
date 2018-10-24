@@ -6,11 +6,16 @@ import fancyTableStyle from './fancy-table.js';
 class MyElement extends LitElement {
   static get style() {
     return css`
-      ${tableStyle}
-      ${fancyTableStyle}
+      :host {
+        --table-border-color: green;
+      }
+
       table {
         margin-bottom: 40px;
       }
+
+      ${tableStyle}
+      ${fancyTableStyle}
     `;
   }
 

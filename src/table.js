@@ -7,6 +7,6 @@ export default css`
 
   .table th,
   .table td {
-    border: 1px solid black;
+    border: 1px solid var(--table-border-color, black);
   }
 `;
