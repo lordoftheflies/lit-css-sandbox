@@ -1,5 +1,4 @@
 const postcss = require('postcss');
-const fs = require('fs');
 
 module.exports = postcss.plugin('postcss-comment-annotation', (callback) => {
   const prefix = '@';

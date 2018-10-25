@@ -4,7 +4,7 @@ const jsxSyntax = require('postcss-jsx');
 const annotate = require('./postcss-comment-annotation.js');
 
 gulp.task('annotate', function() {
-  return gulp.src('src/custom-prop.js').pipe(
+  return gulp.src('src/**.css.js').pipe(
     postcss(
       [
         annotate(function(data) {
