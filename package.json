@@ -4,7 +4,8 @@
   "description": "testing lit-css",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --single-quote --write src/**",
+    "annotate": "gulp annotate",
+    "prettier": "prettier --single-quote --write gulpfile.js src/**",
     "lint": "stylelint src/*"
   },
   "author": "Serhii Kulykov",
@@ -15,6 +16,14 @@
     "lit-css": "^0.1.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "postcss": "^7.0.5",
+    "postcss-comment-annotation": "^1.1.0",
+    "postcss-jsx": "web-padawan/postcss-jsx#lit-css",
+    "postcss-load-config": "^2.0.0",
+    "postcss-styled": "^0.34.0",
+    "postcss-syntax": "^0.34.0",
     "prettier": "^1.14.3",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended": "^2.1.0",

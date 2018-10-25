@@ -1,20 +1,17 @@
 import { LitElement, html } from '@polymer/lit-element';
 import { css } from 'lit-css';
+import customPropStyle from './table.js';
 import tableStyle from './table.js';
 import fancyTableStyle from './fancy-table.js';
 
 class MyElement extends LitElement {
   static get style() {
     return css`
-      :host {
-        --table-border-color: green;
-      }
+      ${customPropStyle} ${tableStyle} ${fancyTableStyle}
 
       table {
         margin-bottom: 40px;
       }
-
-      ${tableStyle} ${fancyTableStyle};
     `;
   }
 
