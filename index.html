@@ -3,6 +3,7 @@
   <head>
     <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script type="module" src="./src/b-box.js"></script>
+    <script type="module" src="./src/b-card.js"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -11,5 +12,10 @@
   </head>
   <body>
     <b-box>The box is a container with a shadow, a border, a radius, and some padding.</b-box>
+
+    <b-card>
+      <div slot="title">Card title</div>
+      <div slot="content">Card content</div>
+    </b-card>
   </body>
 </html>

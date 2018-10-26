@@ -3,6 +3,7 @@ import { css } from 'lit-css';
 export default css`
   :host {
     display: block;
+    margin-bottom: 1.5rem;
     /*
       @type size
       @name --b-box-padding
@@ -12,31 +13,34 @@ export default css`
     /*
       @type color
       @name --b-box-background-color
-      @default --white
+      @default var(--white)
     */
     background-color: var(--b-box-background-color, var(--white));
     /*
       @type color
       @name --b-box-color
-      @default --text-color
+      @default var(--text-color)
     */
     color: var(--b-box-color, var(--text-color));
     /*
       @type size
       @name --b-box-radius
-      @default --radius-large
+      @default var(--radius-large)
     */
     border-radius: var(--b-box-radius, var(--radius-large));
     /*
       @type size
       @name --b-box-shadow
-      @default --shadow-default
+      @default var(--shadow-default)
     */
     box-shadow: var(--b-box-shadow, var(--shadow-default));
+  }
+
+  :host(:last-child) {
+    margin-bottom: 0;
   }
 
   :host([hidden]) {
     display: none !important;
   }
 `;
-

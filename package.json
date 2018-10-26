@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "annotate": "gulp annotate",
-    "prettier": "prettier --single-quote --write gulpfile.js src/**",
+    "prettier": "prettier --single-quote --write gulpfile.js src/**/* utils/**/*",
     "lint": "stylelint src/*"
   },
   "author": "Serhii Kulykov",
@@ -13,7 +13,8 @@
   "dependencies": {
     "@polymer/lit-element": "^0.6.2",
     "@webcomponents/webcomponentsjs": "^2.1.3",
-    "lit-css": "^0.1.2"
+    "lit-css": "^0.1.2",
+    "postcss-custom-properties": "^8.0.8"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
