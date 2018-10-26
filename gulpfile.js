@@ -1,18 +1,27 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const jsxSyntax = require('postcss-jsx');
-const annotate = require('./postcss-comment-annotation.js');
+const syntax = require('postcss-jsx');
+const analyze = require('./tools/postcss-analyze-custom-properties.js');
+const path = require('path');
+const fs = require('fs');
 
-gulp.task('annotate', function() {
-  return gulp.src('src/**.css.js').pipe(
+gulp.task('analyze', function() {
+  return gulp.src('src/components/**/*.css.js').pipe(
     postcss(
       [
-        annotate(function(data) {
-          console.log(data);
+        analyze(result => {
+          const name = path.basename(result.file, '.css.js');
+          const data = result.data;
+          const api = data.filter(item => item.name.startsWith(`--${name}`));
+          fs.writeFileSync(
+            `data/components/${name}.json`,
+            JSON.stringify(api, null, 2),
+            'utf8'
+          );
         })
       ],
       {
-        syntax: jsxSyntax
+        syntax
       }
     )
   );

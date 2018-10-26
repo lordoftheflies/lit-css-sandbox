@@ -1,0 +1,27 @@
+[
+  {
+    "name": "--b-box-padding",
+    "type": "size",
+    "value": "1.25rem"
+  },
+  {
+    "name": "--b-box-background-color",
+    "type": "color",
+    "value": "var(--white)"
+  },
+  {
+    "name": "--b-box-color",
+    "type": "color",
+    "value": "var(--text-color)"
+  },
+  {
+    "name": "--b-box-radius",
+    "type": "size",
+    "value": "var(--radius-large)"
+  },
+  {
+    "name": "--b-box-shadow",
+    "type": "size",
+    "value": "var(--shadow-default)"
+  }
+]
