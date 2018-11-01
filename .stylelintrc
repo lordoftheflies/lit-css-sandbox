@@ -8,7 +8,8 @@
     ]
   ],
   "extends": [
-    "stylelint-config-recommended",
-    "stylelint-config-styled-components"
+    "stylelint-config-standard",
+    "stylelint-config-styled-components",
+    "stylelint-config-prettier"
   ]
 }

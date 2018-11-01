@@ -4,6 +4,8 @@
     <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script type="module" src="./src/components/box/b-box.js"></script>
     <script type="module" src="./src/components/card/b-card.js"></script>
+    <script type="module" src="./src/components/columns/b-columns.js"></script>
+    <script type="module" src="./src/components/column/b-column.js"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -17,5 +19,28 @@
       <div slot="title">Card title</div>
       <div slot="content">Card content</div>
     </b-card>
+
+    <b-columns>
+      <b-column>
+        <b-box>
+          First column
+        </b-box>
+      </b-column>
+      <b-column>
+        <b-box>
+          Second column
+        </b-box>
+      </b-column>
+      <b-column>
+        <b-box>
+          Third column
+        </b-box>
+      </b-column>
+      <b-column>
+        <b-box>
+          Fourth column
+        </b-box>
+      </b-column>
+    </b-columns>
   </body>
 </html>

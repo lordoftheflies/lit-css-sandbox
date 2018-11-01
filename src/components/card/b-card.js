@@ -1,13 +1,12 @@
 import { LitElement, html } from '@polymer/lit-element';
 import { css } from 'lit-css';
-import { colors, shadow } from '../../variables/b-variables.css.js';
+import '../../variables/b-color.css.js';
+import '../../variables/b-shadow.css.js';
 import cardCss from './b-card.css.js';
 
 class Card extends LitElement {
   static get style() {
     return css`
-      ${colors}
-      ${shadow}
       ${cardCss}
     `;
   }

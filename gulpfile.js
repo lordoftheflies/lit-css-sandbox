@@ -12,12 +12,14 @@ gulp.task('analyze', function() {
         analyze(result => {
           const name = path.basename(result.file, '.css.js');
           const data = result.data;
-          const api = data.filter(item => item.name.startsWith(`--${name}`));
-          fs.writeFileSync(
-            `data/components/${name}.json`,
-            JSON.stringify(api, null, 2),
-            'utf8'
-          );
+          const api = data.filter(item => item.name && item.name.startsWith(`--${name}`));
+          if (api.length) {
+            fs.writeFileSync(
+              `data/components/${name}.json`,
+              JSON.stringify(api, null, 2),
+              'utf8'
+            );
+          }
         })
       ],
       {

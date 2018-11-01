@@ -1,16 +1,5 @@
-module.exports = function analyzeType(name, value) {
+module.exports = function analyzeType(name, value = '') {
   if (
-    name.includes('color') ||
-    value.startsWith('hsl') ||
-    value.startsWith('#') ||
-    value.startsWith('rgb')
-  ) {
-    return 'color';
-  } else if (value.endsWith('ms')) {
-    return 'duration';
-  } else if (value.endsWith('00') || value == 'normal') {
-    return 'font-weight';
-  } else if (
     name.includes('padding') ||
     name.includes('margin') ||
     name.includes('radius') ||
@@ -21,6 +10,17 @@ module.exports = function analyzeType(name, value) {
     value.includes('em ')
   ) {
     return 'size';
+  } else if (
+    name.includes('color') ||
+    value.startsWith('hsl') ||
+    value.startsWith('#') ||
+    value.startsWith('rgb')
+  ) {
+    return 'color';
+  } else if (value.endsWith('ms')) {
+    return 'duration';
+  } else if (value.endsWith('00') || value == 'normal') {
+    return 'font-weight';
   }
 
   return 'string';

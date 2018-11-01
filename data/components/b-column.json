@@ -1,0 +1,7 @@
+[
+  {
+    "name": "--b-column-gap",
+    "type": "size",
+    "value": "var(--column-gap)"
+  }
+]

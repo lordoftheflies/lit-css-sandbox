@@ -1,14 +1,14 @@
 import { LitElement, html } from '@polymer/lit-element';
 import { css } from 'lit-css';
-import '../../variables/b-color.css.js';
-import '../../variables/b-shadow.css.js';
-import '../../variables/b-radius.css.js';
-import boxCss from './b-box.css.js';
+import '../../variables/b-grid.css.js';
+import columns from './b-columns.css.js';
+import mobile from './b-columns-mobile.css.js';
 
-class Box extends LitElement {
+class Columns extends LitElement {
   static get style() {
     return css`
-      ${boxCss}
+      ${columns}
+      ${mobile}
     `;
   }
 
@@ -22,4 +22,4 @@ class Box extends LitElement {
   }
 }
 
-customElements.define('b-box', Box);
+customElements.define('b-columns', Columns);
